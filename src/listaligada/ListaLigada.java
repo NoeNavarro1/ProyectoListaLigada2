@@ -68,6 +68,20 @@ package listaligada;
             posicion++;
         }
     }
+    
+    //paso 1:
+    //Metodo para Borrar nodo del inicio 
+   public T BorrarInicio(){
+      T elemento = (T) head.getDato();
+      if(head==tail){
+          head = null; 
+          tail = null;
+      }else{
+          head = head.getSiguiente();
+      }
+      return  elemento;
+   }
+    
 
 }  
 

@@ -4,12 +4,14 @@
  */
 package listaligada;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class TestingListaLigada {
-
+    
+    
     public static void main(String[] args) throws IOException {
         BufferedReader bufer = new BufferedReader(new InputStreamReader(System.in));
         String entrada;
@@ -71,20 +73,28 @@ public class TestingListaLigada {
         //Otra lista ligada,ahora almacena Strings
         ListaLigada<String> lista2 = new ListaLigada<>();
         System.out.println("-----Creando una lista de Strings------");
-        for(;;){
+        
+        while(true){
             System.out.println("Escriba el String para agregar a la lista: ");
             entrada = bufer.readLine();
             lista2.add(entrada);
-            System.out.println("¿Quieres insertar mas datos?");
+            System.out.println("1.¿Quieres insertar mas datos?");    
             entrada = bufer.readLine();
             respuesta = entrada.charAt(0);
-            if(respuesta == 'n' || respuesta == 'N')
+            if(respuesta == 'n' || respuesta == 'N'){
+               System.out.println("2.¿Quieres eliminar el dato del inicio?");
+               bufer.readLine();
+               System.out.println("3¿Quieres eliminar el dato del final?");
+               bufer.readLine();
+               System.out.println("4.¿Quieres eliminar un dato especifico??");
+              bufer.readLine();
+                }
             break;
         }
-
-        
+      
         System.out.println(" Contenido de la lista String");
         lista2.printList();
+       
     
 }
 }
