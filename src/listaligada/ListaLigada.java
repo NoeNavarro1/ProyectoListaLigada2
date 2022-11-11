@@ -82,6 +82,23 @@ package listaligada;
       return  elemento;
    }
     
+   public T BorrarFinal(){
+       T elemento = (T) tail.getDato();
+       if(head == tail){
+           head = null;
+           tail = null;
+       }else{
+           Nodo Temporal = head;
+           while(Temporal.getSiguiente() !=tail){
+               Temporal = Temporal.getSiguiente();
+               
+           }
+           tail = Temporal;
+           tail.setSiguiente(null);
+       }
+        return elemento;
+   }
+   
 
 }  
 
