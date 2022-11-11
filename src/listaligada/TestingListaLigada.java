@@ -18,7 +18,7 @@ public class TestingListaLigada {
         char respuesta;
 
         ListaLigada lista = new ListaLigada();
-
+        /*
         while (true) {
             System.out.println("Escribe un dato entero");
             entrada = bufer.readLine();
