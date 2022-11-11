@@ -66,8 +66,8 @@ public class TestingListaLigada {
         System.out.println("---------------------------");
         System.out.println("Contenido de la lista");
         lista.printList();
+        */
         
-        /*
         //Otra lista ligada,ahora almacena Strings
         ListaLigada<String> lista2 = new ListaLigada<>();
         System.out.println("-----Creando una lista de Strings------");
@@ -85,6 +85,6 @@ public class TestingListaLigada {
         
         System.out.println(" Contenido de la lista String");
         lista2.printList();
-    }*/
+    
 }
 }
