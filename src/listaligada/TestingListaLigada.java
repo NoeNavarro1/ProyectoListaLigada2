@@ -16,7 +16,7 @@ public class TestingListaLigada {
         BufferedReader bufer = new BufferedReader(new InputStreamReader(System.in));
         String entrada;
 
-        int dato;
+        int dato = 0;
         char respuesta;
 
         ListaLigada lista = new ListaLigada();
@@ -74,27 +74,37 @@ public class TestingListaLigada {
         ListaLigada<String> lista2 = new ListaLigada<>();
         System.out.println("-----Creando una lista de Strings------");
         
-        while(true){
+        for(;;){
             System.out.println("Escriba el String para agregar a la lista: ");
             entrada = bufer.readLine();
             lista2.add(entrada);
-            System.out.println("1.¿Quieres insertar mas datos?");    
+            System.out.println("1.¿Quieres insertar mas datos? presione s para si, n para no");    
             entrada = bufer.readLine();
             respuesta = entrada.charAt(0);
-            if(respuesta == 'n' || respuesta == 'N'){
-               System.out.println("2.¿Quieres eliminar el dato del inicio?");
+            if(respuesta == 's'){
+                System.out.println("Inserte el dato");
+                bufer.readLine();
+            }else if(respuesta == 'n'){
+               System.out.println("2.¿Quieres eliminar el dato del inicio? presione s para si, n para no");
                bufer.readLine();
-               System.out.println("3¿Quieres eliminar el dato del final?");
+            }else if(respuesta == 's'){
+                System.out.println("El dato del nodo inicial a sido eliminado correctamente");
+            }else if(respuesta == 'n'){
+               System.out.println("3¿Quieres eliminar el dato del final? presione s para si, n para no");
                bufer.readLine();
-               System.out.println("4.¿Quieres eliminar un dato especifico??");
-              bufer.readLine();
+            }else if(respuesta == 's'){
+                System.out.println("el dato del nodo final Fue eliminado correctamente");
+            }else if(respuesta == 'n'){
+               System.out.println("4.¿Quieres eliminar un dato especifico? presione s para si, n para no");
+               bufer.readLine();
+            }else if(respuesta == 's'){
+                  System.out.println("¿Que dato desea eliminar?");
+               bufer.readLine();     
+              }
+             break;
                 }
-            break;
-        }
-      
-        System.out.println(" Contenido de la lista String");
-        lista2.printList();
-       
-    
+           System.out.println(" Contenido de la lista String");
+           lista2.printList();
+    }   
 }
-}
+
